@@ -337,3 +337,1025 @@ Processing by Api::V1::ArtworksController#index as HTML
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:13 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (11.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: -2.9ms | ActiveRecord: 16.8ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:13 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 17:53:16 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 17:53:16 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists/2" for ::1 at 2025-03-22 17:53:17 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:41:in `set_artist'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists/2" for ::1 at 2025-03-22 17:53:17 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:41:in `set_artist'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:21 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:21 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 17:53:26 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (1.1ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 17:53:26 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:32 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:53:32 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements/2" for ::1 at 2025-03-22 17:55:09 +0100
+Processing by Api::V1::ArtMovementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtMovement Load (0.5ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:41:in `set_art_movement'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements/2" for ::1 at 2025-03-22 17:55:09 +0100
+Processing by Api::V1::ArtMovementsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:41:in `set_art_movement'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:55:13 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 17:55:13 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:15:50 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (14.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: -4.2ms | ActiveRecord: 20.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:15:50 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:20:34 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:20:34 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:20:39 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:20:39 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:20:42 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.8ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:20:42 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.7ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/1" for ::1 at 2025-03-22 18:20:45 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.1ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/1" for ::1 at 2025-03-22 18:20:45 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists/1" for ::1 at 2025-03-22 18:20:49 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:42:in `set_artist'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/api/v1/artists/1" for ::1 at 2025-03-22 18:20:49 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:42:in `set_artist'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:24:40 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:24:40 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:43:09 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (13.5ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: -5.0ms | ActiveRecord: 19.9ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:43:09 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:47:14 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:47:14 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:48:20 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.5ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:48:20 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:52:59 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:52:59 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:53:03 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:53:03 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:53:15 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/art_movements" for ::1 at 2025-03-22 18:53:15 +0100
+Processing by Api::V1::ArtMovementsController#index as HTML
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" /*action='index',application='Api',controller='art_movements'*/[0m
+  ↳ app/controllers/api/v1/art_movements_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:53:17 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 18:53:17 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:53:18 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:53:18 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:55:09 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:55:09 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:55:12 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:55:12 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:55:15 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:55:15 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:00 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:00 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:56:02 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:56:02 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.4ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.1ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:05 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:05 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:07 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:07 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:08 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 18:56:08 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.1ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:56:10 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:56:10 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (8355.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_development" /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (58.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_development" /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (24.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_test" /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (81.9ms)[0m  [1m[35mCREATE DATABASE "api_development" ENCODING = 'unicode' /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE DATABASE "api_test" ENCODING = 'unicode' /*application='Api'*/[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Api'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "art_movements" CASCADE /*application='Api'*/[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "art_movements" ("id" bigserial primary key, "name" character varying, "description" text, "period" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying, "biography" text, "birth_date" date, "death_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artworks" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying, "description" text, "year" integer, "image_url" character varying, "artist_id" bigint NOT NULL, "art_movement_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_art_movement_id" ON "artworks" ("art_movement_id") /*application='Api'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_artist_id" ON "artworks" ("artist_id") /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_93942250ff"
+FOREIGN KEY ("art_movement_id")
+  REFERENCES "art_movements" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_61f542e710"
+FOREIGN KEY ("artist_id")
+  REFERENCES "artists" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250322162908) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250322162907),
+(20250322162906); /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-03-22 17:59:34.598634', '2025-03-22 17:59:34.598636') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c80161ebdc3f49d1a37280b1426e45f3c34f8875', '2025-03-22 17:59:34.600337', '2025-03-22 17:59:34.600337') RETURNING "key" /*application='Api'*/[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Api'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "art_movements" CASCADE /*application='Api'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "art_movements" ("id" bigserial primary key, "name" character varying, "description" text, "period" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying, "biography" text, "birth_date" date, "death_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artworks" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying, "description" text, "year" integer, "image_url" character varying, "artist_id" bigint NOT NULL, "art_movement_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_art_movement_id" ON "artworks" ("art_movement_id") /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_artist_id" ON "artworks" ("artist_id") /*application='Api'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_93942250ff"
+FOREIGN KEY ("art_movement_id")
+  REFERENCES "art_movements" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_61f542e710"
+FOREIGN KEY ("artist_id")
+  REFERENCES "artists" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250322162908) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250322162907),
+(20250322162906); /*application='Api'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-03-22 17:59:34.623392', '2025-03-22 17:59:34.623393') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-03-22 17:59:34.624241' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c80161ebdc3f49d1a37280b1426e45f3c34f8875', '2025-03-22 17:59:34.624844', '2025-03-22 17:59:34.624845') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.2ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Renaissance', 'A period of European cultural, artistic, political and economic ''rebirth'' following the Middle Ages.', '14th-17th century', '2025-03-22 17:59:34.643703', '2025-03-22 17:59:34.643703') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Impressionism' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.1ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Impressionism', 'A 19th-century art movement characterized by relatively small, thin, yet visible brush strokes, open composition, emphasis on accurate depiction of light in its changing qualities.', '19th century', '2025-03-22 17:59:34.645898', '2025-03-22 17:59:34.645898') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Cubism' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.0ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Cubism', 'An early-20th-century avant-garde art movement that revolutionized European painting and sculpture, and inspired related movements in music, literature and architecture.', 'Early 20th century', '2025-03-22 17:59:34.647392', '2025-03-22 17:59:34.647392') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (1.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Leonardo da Vinci', 'Leonardo da Vinci was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect.', '1452-04-15', '1519-05-02', '2025-03-22 17:59:34.654536', '2025-03-22 17:59:34.654536') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Claude Monet', 'Claude Monet was a French painter and founder of impressionist painting who is seen as a key precursor to modernism.', '1840-11-14', '1926-12-05', '2025-03-22 17:59:34.656930', '2025-03-22 17:59:34.656930') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Pablo Picasso', 'Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France.', '1881-10-25', '1973-04-08', '2025-03-22 17:59:34.658257', '2025-03-22 17:59:34.658257') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.8ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Mona Lisa', 'The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as ''the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world''.', 1503, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg', 1, 1, '2025-03-22 17:59:34.664378', '2025-03-22 17:59:34.664378') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.6ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Water Lilies', 'Water Lilies is a series of approximately 250 oil paintings by French Impressionist Claude Monet. The paintings depict his flower garden at his home in Giverny, and were the main focus of his artistic production during the last thirty years of his life.', 1916, 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Claude_Monet_-_Seerosen.jpg', 2, 2, '2025-03-22 17:59:34.666697', '2025-03-22 17:59:34.666697') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.5ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Les Demoiselles d''Avignon', 'Les Demoiselles d''Avignon is a large oil painting created in 1907 by the Spanish artist Pablo Picasso. The work, part of the permanent collection of the Museum of Modern Art, portrays five nude female prostitutes from a brothel on Carrer d''Avinyó in Barcelona.', 1907, 'https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg', 3, 3, '2025-03-22 17:59:34.668244', '2025-03-22 17:59:34.668244') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:59:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (1.0ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 56ms (Views: 6.6ms | ActiveRecord: 35.5ms (3 queries, 0 cached) | GC: 13.6ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 18:59:42 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (57.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_development" /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (18.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "api_test" /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE DATABASE "api_development" ENCODING = 'unicode' /*application='Api'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Api'*/[0m
+  [1m[35m (31.7ms)[0m  [1m[35mCREATE DATABASE "api_test" ENCODING = 'unicode' /*application='Api'*/[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Api'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "art_movements" CASCADE /*application='Api'*/[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "art_movements" ("id" bigserial primary key, "name" character varying, "description" text, "period" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying, "biography" text, "birth_date" date, "death_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artworks" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying, "description" text, "year" integer, "image_url" character varying, "artist_id" bigint NOT NULL, "art_movement_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_art_movement_id" ON "artworks" ("art_movement_id") /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_artist_id" ON "artworks" ("artist_id") /*application='Api'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_93942250ff"
+FOREIGN KEY ("art_movement_id")
+  REFERENCES "art_movements" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_61f542e710"
+FOREIGN KEY ("artist_id")
+  REFERENCES "artists" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250322162908) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250322162907),
+(20250322162906); /*application='Api'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-03-22 18:00:11.557150', '2025-03-22 18:00:11.557151') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c80161ebdc3f49d1a37280b1426e45f3c34f8875', '2025-03-22 18:00:11.558624', '2025-03-22 18:00:11.558625') RETURNING "key" /*application='Api'*/[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Api'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "art_movements" CASCADE /*application='Api'*/[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "art_movements" ("id" bigserial primary key, "name" character varying, "description" text, "period" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" character varying, "biography" text, "birth_date" date, "death_date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "artworks" CASCADE /*application='Api'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "artworks" ("id" bigserial primary key, "title" character varying, "description" text, "year" integer, "image_url" character varying, "artist_id" bigint NOT NULL, "art_movement_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_art_movement_id" ON "artworks" ("art_movement_id") /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_artworks_on_artist_id" ON "artworks" ("artist_id") /*application='Api'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_93942250ff"
+FOREIGN KEY ("art_movement_id")
+  REFERENCES "art_movements" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "artworks" ADD CONSTRAINT "fk_rails_61f542e710"
+FOREIGN KEY ("artist_id")
+  REFERENCES "artists" ("id")
+ /*application='Api'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250322162908) /*application='Api'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250322162907),
+(20250322162906); /*application='Api'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-03-22 18:00:11.583152', '2025-03-22 18:00:11.583154') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-03-22 18:00:11.584090' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Api'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'c80161ebdc3f49d1a37280b1426e45f3c34f8875', '2025-03-22 18:00:11.584710', '2025-03-22 18:00:11.584711') RETURNING "key" /*application='Api'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Renaissance' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.2ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Renaissance', 'A period of European cultural, artistic, political and economic ''rebirth'' following the Middle Ages.', '14th-17th century', '2025-03-22 18:00:11.605456', '2025-03-22 18:00:11.605456') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Impressionism' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.0ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Impressionism', 'A 19th-century art movement characterized by relatively small, thin, yet visible brush strokes, open composition, emphasis on accurate depiction of light in its changing qualities.', '19th century', '2025-03-22 18:00:11.607512', '2025-03-22 18:00:11.607512') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtMovement Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "art_movements" WHERE "art_movements"."name" = 'Cubism' LIMIT 1 /*application='Api'*/[0m
+  [1m[36mArtMovement Create (0.0ms)[0m  [1m[32mINSERT INTO "art_movements" ("name", "description", "period", "created_at", "updated_at") VALUES ('Cubism', 'An early-20th-century avant-garde art movement that revolutionized European painting and sculpture, and inspired related movements in music, literature and architecture.', 'Early 20th century', '2025-03-22 18:00:11.609043', '2025-03-22 18:00:11.609043') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Leonardo da Vinci', 'Leonardo da Vinci was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect.', '1452-04-15', '1519-05-02', '2025-03-22 18:00:11.615237', '2025-03-22 18:00:11.615237') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Claude Monet', 'Claude Monet was a French painter and founder of impressionist painting who is seen as a key precursor to modernism.', '1840-11-14', '1926-12-05', '2025-03-22 18:00:11.617035', '2025-03-22 18:00:11.617035') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtist Create (0.4ms)[0m  [1m[32mINSERT INTO "artists" ("name", "biography", "birth_date", "death_date", "created_at", "updated_at") VALUES ('Pablo Picasso', 'Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France.', '1881-10-25', '1973-04-08', '2025-03-22 18:00:11.618084', '2025-03-22 18:00:11.618084') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.7ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Mona Lisa', 'The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci. Considered an archetypal masterpiece of the Italian Renaissance, it has been described as ''the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world''.', 1503, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg', 1, 1, '2025-03-22 18:00:11.623594', '2025-03-22 18:00:11.623594') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.6ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Water Lilies', 'Water Lilies is a series of approximately 250 oil paintings by French Impressionist Claude Monet. The paintings depict his flower garden at his home in Giverny, and were the main focus of his artistic production during the last thirty years of his life.', 1916, 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Claude_Monet_-_The_Water_Lilies_-_The_Clouds_-_Google_Art_Project.jpg', 2, 2, '2025-03-22 18:00:11.625120', '2025-03-22 18:00:11.625120') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN /*application='Api'*/[0m
+  [1m[36mArtwork Create (0.4ms)[0m  [1m[32mINSERT INTO "artworks" ("title", "description", "year", "image_url", "artist_id", "art_movement_id", "created_at", "updated_at") VALUES ('Les Demoiselles d''Avignon', 'Les Demoiselles d''Avignon is a large oil painting created in 1907 by the Spanish artist Pablo Picasso. The work, part of the permanent collection of the Museum of Modern Art, portrays five nude female prostitutes from a brothel on Carrer d''Avinyó in Barcelona.', 1907, 'https://upload.wikimedia.org/wikipedia/en/4/4c/Les_Demoiselles_d%27Avignon.jpg', 3, 3, '2025-03-22 18:00:11.626429', '2025-03-22 18:00:11.626429') RETURNING "id" /*application='Api'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT /*application='Api'*/[0m
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Api'*/[0m
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.9ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 56ms (Views: 6.8ms | ActiveRecord: 35.6ms (3 queries, 0 cached) | GC: 13.6ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:26 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.1ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:29 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.3ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:29 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.2ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:31 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:31 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:39 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:39 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:41 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.5ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.4ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks" for ::1 at 2025-03-22 19:00:41 +0100
+Processing by Api::V1::ArtworksController#index as HTML
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" IN (1, 2, 3) /*action='index',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:46 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.6ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.2ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artworks/2" for ::1 at 2025-03-22 19:00:46 +0100
+Processing by Api::V1::ArtworksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtwork Load (0.3ms)[0m  [1m[34mSELECT "artworks".* FROM "artworks" WHERE "artworks"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:41:in `set_artwork'
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+  [1m[36mArtMovement Load (0.1ms)[0m  [1m[34mSELECT "art_movements".* FROM "art_movements" WHERE "art_movements"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artworks'*/[0m
+  ↳ app/controllers/api/v1/artworks_controller.rb:12:in `show'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists/2" for ::1 at 2025-03-22 19:01:00 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:42:in `set_artist'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists/2" for ::1 at 2025-03-22 19:01:00 +0100
+Processing by Api::V1::ArtistsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:42:in `set_artist'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 19:03:31 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 19:03:31 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 19:05:57 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/api/v1/artists" for ::1 at 2025-03-22 19:05:57 +0100
+Processing by Api::V1::ArtistsController#index as HTML
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='Api',controller='artists'*/[0m
+  ↳ app/controllers/api/v1/artists_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
