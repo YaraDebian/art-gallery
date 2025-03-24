@@ -1,4 +1,4 @@
-import { Container, Typography, Grid, Paper, Box, CardActionArea, CardContent } from '@mui/material'
+import { Container, Typography, Grid,  Box, CardActionArea, CardContent } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
