@@ -10,7 +10,7 @@ module Api
       end
 
       def show
-        render json: @art_movement
+        render json: { art_movement: @art_movement, artworks: @art_movement.artworks }
       end
 
       def create

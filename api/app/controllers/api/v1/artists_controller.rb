@@ -5,12 +5,12 @@ module Api
       before_action :set_artist, only: [ :show, :update, :destroy ]
       # TODO: add signatures
       def index
-        @artists = Artist.all
-        render json: @artists
+        @artists = Artist.includes(artworks: :art_movement).all
+        render json: @artists, include: { artworks: { include: :art_movement } }
       end
 
       def show
-        render json: @artist
+        render json:  @artist, include: { artworks: { include: :art_movement } }
       end
 
       def create
@@ -25,7 +25,7 @@ module Api
 
       def update
         if @artist.update(artist_params)
-          render json: @artist
+          render json: { artist: @artist, artworks: @artist.artworks.includes(:art_movement) }
         else
           render json: @artist.errors, status: :unprocessable_entity
         end
