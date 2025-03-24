@@ -1,59 +1,59 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { Container, Typography, Paper, Grid, Box } from '@mui/material'
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Container, Typography, Paper, Grid, Box } from '@mui/material';
+import axios from 'axios';
 
 interface Artist {
-  id: number
-  name: string
-  biography: string
-  birth_date: string
-  death_date: string | null
+  id: number;
+  name: string;
+  biography: string;
+  birth_date: string;
+  death_date: string | null;
   artworks: Array<{
-    id: number
-    title: string
-    description: string
-    year: number
-    image_url: string
+    id: number;
+    title: string;
+    description: string;
+    year: number;
+    image_url: string;
     art_movement: {
-      id: number
-      name: string
-    }
-  }>
+      id: number;
+      name: string;
+    };
+  }>;
 }
 
 const ArtistDetail = () => {
-  const { id } = useParams<{ id: string }>()
-  const [artist, setArtist] = useState<Artist | null>(null)
+  const { id } = useParams<{ id: string }>();
+  const [artist, setArtist] = useState<Artist | null>(null);
 
   useEffect(() => {
     const fetchArtist = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/artists/${id}`)
-        setArtist(response.data)
+        const response = await axios.get(`http://localhost:3000/api/v1/artists/${id}`);
+        setArtist(response.data);
       } catch (error) {
-        console.error('Error fetching artist:', error)
+        console.error('Error fetching artist:', error);
       }
-    }
+    };
 
-    fetchArtist()
-  }, [id])
+    fetchArtist();
+  }, [id]);
 
   if (!artist) {
     return (
       <Container>
         <Typography>Loading...</Typography>
       </Container>
-    )
+    );
   }
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
-    })
-  }
+      day: 'numeric',
+    });
+  };
 
   return (
     <Container>
@@ -65,7 +65,7 @@ const ArtistDetail = () => {
           {formatDate(artist.birth_date)}
           {artist.death_date ? ` - ${formatDate(artist.death_date)}` : ' - Present'}
         </Typography>
-        
+
         <Paper sx={{ p: 3, mb: 4 }}>
           <Typography variant="body1" paragraph>
             {artist.biography}
@@ -76,7 +76,7 @@ const ArtistDetail = () => {
           Artworks
         </Typography>
         <Grid container spacing={4}>
-          {artist.artworks.map((artwork) => (
+          {artist.artworks.map(artwork => (
             <Grid item xs={12} sm={6} md={4} key={artwork.id}>
               <Paper sx={{ p: 2 }}>
                 <img
@@ -99,7 +99,7 @@ const ArtistDetail = () => {
         </Grid>
       </Box>
     </Container>
-  )
-}
+  );
+};
 
-export default ArtistDetail 
+export default ArtistDetail;

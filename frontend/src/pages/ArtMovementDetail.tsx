@@ -1,49 +1,49 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { Container, Typography, Paper, Grid, Box } from '@mui/material'
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Container, Typography, Paper, Grid, Box } from '@mui/material';
+import axios from 'axios';
 
 interface ArtMovement {
-  id: number
-  name: string
-  description: string
-  period: string
+  id: number;
+  name: string;
+  description: string;
+  period: string;
   artworks: Array<{
-    id: number
-    title: string
-    description: string
-    year: number
-    image_url: string
+    id: number;
+    title: string;
+    description: string;
+    year: number;
+    image_url: string;
     artist: {
-      id: number
-      name: string
-    }
-  }>
+      id: number;
+      name: string;
+    };
+  }>;
 }
 
 const ArtMovementDetail = () => {
-  const { id } = useParams<{ id: string }>()
-  const [movement, setMovement] = useState<ArtMovement | null>(null)
+  const { id } = useParams<{ id: string }>();
+  const [movement, setMovement] = useState<ArtMovement | null>(null);
 
   useEffect(() => {
     const fetchMovement = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/art_movements/${id}`)
-        setMovement(response.data)
+        const response = await axios.get(`http://localhost:3000/api/v1/art_movements/${id}`);
+        setMovement(response.data);
       } catch (error) {
-        console.error('Error fetching art movement:', error)
+        console.error('Error fetching art movement:', error);
       }
-    }
+    };
 
-    fetchMovement()
-  }, [id])
+    fetchMovement();
+  }, [id]);
 
   if (!movement) {
     return (
       <Container>
         <Typography>Loading...</Typography>
       </Container>
-    )
+    );
   }
 
   return (
@@ -55,7 +55,7 @@ const ArtMovementDetail = () => {
         <Typography variant="h5" color="text.secondary" gutterBottom>
           {movement.period}
         </Typography>
-        
+
         <Paper sx={{ p: 3, mb: 4 }}>
           <Typography variant="body1" paragraph>
             {movement.description}
@@ -66,7 +66,7 @@ const ArtMovementDetail = () => {
           Notable Artworks
         </Typography>
         <Grid container spacing={4}>
-          {movement.artworks.map((artwork) => (
+          {movement.artworks.map(artwork => (
             <Grid item xs={12} sm={6} md={4} key={artwork.id}>
               <Paper sx={{ p: 2 }}>
                 <img
@@ -89,7 +89,7 @@ const ArtMovementDetail = () => {
         </Grid>
       </Box>
     </Container>
-  )
-}
+  );
+};
 
-export default ArtMovementDetail 
+export default ArtMovementDetail;

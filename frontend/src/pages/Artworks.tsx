@@ -1,40 +1,40 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Container, Grid, Card, CardContent, Typography, CardActionArea, Box } from '@mui/material'
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Container, Grid, Card, CardContent, Typography, CardActionArea, Box } from '@mui/material';
+import axios from 'axios';
 
 interface Artwork {
-  id: number
-  title: string
-  description: string
-  year: number
-  image_url: string
+  id: number;
+  title: string;
+  description: string;
+  year: number;
+  image_url: string;
   artist: {
-    id: number
-    name: string
-  }
+    id: number;
+    name: string;
+  };
   art_movement: {
-    id: number
-    name: string
-  }
+    id: number;
+    name: string;
+  };
 }
 
 const Artworks = () => {
-  const [artworks, setArtworks] = useState<Artwork[]>([])
-  const navigate = useNavigate()
+  const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchArtworks = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/artworks')
-        setArtworks(response.data)
+        const response = await axios.get('http://localhost:3000/api/v1/artworks');
+        setArtworks(response.data);
       } catch (error) {
-        console.error('Error fetching artworks:', error)
+        console.error('Error fetching artworks:', error);
       }
-    }
+    };
 
-    fetchArtworks()
-  }, [])
+    fetchArtworks();
+  }, []);
 
   return (
     <Container>
@@ -43,7 +43,7 @@ const Artworks = () => {
           Artworks
         </Typography>
         <Grid container spacing={4}>
-          {artworks.map((artwork) => (
+          {artworks.map(artwork => (
             <Grid item xs={12} sm={6} md={4} key={artwork.id}>
               <Card>
                 <CardActionArea onClick={() => navigate(`/artworks/${artwork.id}`)}>
@@ -76,7 +76,7 @@ const Artworks = () => {
         </Grid>
       </Box>
     </Container>
-  )
-}
+  );
+};
 
-export default Artworks 
+export default Artworks;

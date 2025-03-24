@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :art_movements
       resources :artists
-      resources :artworks
+      resources :artworks do
+        get :related_artworks, on: :member
+      end
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

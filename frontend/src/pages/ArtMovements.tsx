@@ -1,31 +1,31 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Container, Grid, Card, CardContent, Typography, CardActionArea, Box } from '@mui/material'
-import axios from 'axios'
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Container, Grid, Card, CardContent, Typography, CardActionArea, Box } from '@mui/material';
+import axios from 'axios';
 
 interface ArtMovement {
-  id: number
-  name: string
-  description: string
-  period: string
+  id: number;
+  name: string;
+  description: string;
+  period: string;
 }
 
 const ArtMovements = () => {
-  const [movements, setMovements] = useState<ArtMovement[]>([])
-  const navigate = useNavigate()
+  const [movements, setMovements] = useState<ArtMovement[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovements = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/v1/art_movements')
-        setMovements(response.data)
+        const response = await axios.get('http://localhost:3000/api/v1/art_movements');
+        setMovements(response.data);
       } catch (error) {
-        console.error('Error fetching art movements:', error)
+        console.error('Error fetching art movements:', error);
       }
-    }
+    };
 
-    fetchMovements()
-  }, [])
+    fetchMovements();
+  }, []);
 
   return (
     <Container>
@@ -34,7 +34,7 @@ const ArtMovements = () => {
           Art Movements
         </Typography>
         <Grid container spacing={4}>
-          {movements.map((movement) => (
+          {movements.map(movement => (
             <Grid item xs={12} sm={6} md={4} key={movement.id}>
               <Card>
                 <CardActionArea onClick={() => navigate(`/movements/${movement.id}`)}>
@@ -56,7 +56,7 @@ const ArtMovements = () => {
         </Grid>
       </Box>
     </Container>
-  )
-}
+  );
+};
 
-export default ArtMovements 
+export default ArtMovements;
