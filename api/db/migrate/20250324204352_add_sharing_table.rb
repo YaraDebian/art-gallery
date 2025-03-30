@@ -1,8 +1,8 @@
 class AddSharingTable < ActiveRecord::Migration[8.0]
   def change
     create_table :sharings do |t|
-      t.foreign_key :users, column: :user_id
-      t.foreign_key :galleries, column: :gallery_id
+      t.references :user, null: false, foreign_key: true
+      t.references :gallery, null: false, foreign_key: true
       t.timestamps
     end
   end

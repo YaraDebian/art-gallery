@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_24_203325) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_24_204352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -40,8 +40,25 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_24_203325) do
     t.bigint "art_movement_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["art_movement_id"], name: "index_artworks_on_art_movement_id"
-    t.index ["artist_id"], name: "index_artworks_on_artist_id"
+    t.index [ "art_movement_id" ], name: "index_artworks_on_art_movement_id"
+    t.index [ "artist_id" ], name: "index_artworks_on_artist_id"
+  end
+
+  create_table "galleries", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sharings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "gallery_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index [ "gallery_id" ], name: "index_sharings_on_gallery_id"
+    t.index [ "user_id" ], name: "index_sharings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +73,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_24_203325) do
 
   add_foreign_key "artworks", "art_movements"
   add_foreign_key "artworks", "artists"
+  add_foreign_key "galleries", "users", column: "id"
+  add_foreign_key "sharings", "galleries"
+  add_foreign_key "sharings", "users"
 end
