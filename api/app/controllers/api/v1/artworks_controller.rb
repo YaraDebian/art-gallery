@@ -14,8 +14,11 @@ module Api
 
       def related_artworks
         @artwork = Artwork.find(params[:id])
-        related_artworks = (Artwork.where(artist_id: @artwork.artist_id).or(Artwork.where(art_movement_id: @artwork.art_movement_id))).where.not(id: @artwork.id)
-        render json: related_artworks, include: [ :artist, :art_movement ]
+        recommendations = ArtworkRecommendationService.find_recommendations(@artwork, :artist)
+        recommendations += ArtworkRecommendationService.find_recommendations(@artwork, :movement)
+        recommendations += ArtworkRecommendationService.find_recommendations(@artwork, :period)
+
+        render json: recommendations, include: [ :artist, :art_movement ]
       end
 
       def create

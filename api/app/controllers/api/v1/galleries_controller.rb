@@ -1,5 +1,5 @@
 class Api::V1::GalleriesController < ApplicationController
-  before_action :set_gallery, only: [:show, :update, :destroy]
+  before_action :set_gallery, only: [ :show, :update, :destroy ]
 
   def index
     @galleries = Gallery.all
