@@ -14,9 +14,9 @@ module Api
 
       def related_artworks
         @artwork = Artwork.find(params[:id])
-        recommendations = ArtworkRecommendationService.find_recommendations(@artwork, :artist)
-        recommendations += ArtworkRecommendationService.find_recommendations(@artwork, :movement)
-        recommendations += ArtworkRecommendationService.find_recommendations(@artwork, :period)
+        recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :artist)
+        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :movement)
+        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :period)
 
         render json: recommendations, include: [ :artist, :art_movement ]
       end
