@@ -1,3 +1,6 @@
+require "sorbet-runtime"
+require "typed_params"
+
 module Api
   module V1
     class ArtworksController < ApplicationController
@@ -13,7 +16,7 @@ module Api
       end
 
       def related_artworks
-        @artwork = Artwork.find(params[:id])
+        @artwork = Artwork.find(read_params.id)
         recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :artist)
         recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :movement)
         recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :period)
@@ -22,7 +25,7 @@ module Api
       end
 
       def create
-        @artwork = Artwork.new(artwork_params)
+        @artwork = Artwork.new(create_params)
 
         if @artwork.save
           render json: @artwork, status: :created, include: [ :artist, :art_movement ]
@@ -32,7 +35,7 @@ module Api
       end
 
       def update
-        if @artwork.update(artwork_params)
+        if @artwork.update(update_params)
           render json: @artwork, include: [ :artist, :art_movement ]
         else
           render json: @artwork.errors, status: :unprocessable_entity
@@ -50,8 +53,36 @@ module Api
         @artwork = Artwork.find(params[:id])
       end
 
-      def artwork_params
-        params.require(:artwork).permit(:title, :description, :year, :image_url, :artist_id, :art_movement_id)
+      class ReadParams < T::Struct
+        const :id, Integer, factory: ->(val) { Integer(val) }
+      end
+
+      def read_params
+        TypedParams[ReadParams].new.extract!(params)
+      end
+
+      class CreateParams < T::Struct
+        const :title, String, factory: ->(val) { String(val) }
+        const :description, String, factory: ->(val) { String(val) }
+        const :year, Integer, factory: ->(val) { Integer(val) }
+        const :image_url, String, factory: ->(val) { String(val) }
+        const :artist_id, Integer, factory: ->(val) { Integer(val) }
+        const :art_movement_id, Integer, factory: ->(val) { Integer(val) }
+      end
+
+      def create_params
+        TypedParams[CreateParams].new.extract!(params)
+      end
+
+      class UpdateParams < T::Struct
+        const :id, Integer, factory: ->(val) { Integer(val) }
+        const :title, String, factory: ->(val) { String(val) }
+        const :description, String, factory: ->(val) { String(val) }
+        const :year, Integer, factory: ->(val) { Integer(val) }
+      end
+
+      def update_params
+        TypedParams[UpdateParams].new.extract!(params)
       end
     end
   end

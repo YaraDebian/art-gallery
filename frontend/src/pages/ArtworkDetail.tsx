@@ -34,11 +34,12 @@ const ArtworkDetail = () => {
   const [artwork, setArtwork] = useState<Artwork | null>(null);
   const [relatedArtworks, setRelatedArtworks] = useState<Artwork[]>([]);
   useEffect(() => {
+    const artworkId = parseInt(id || '0', 10);
     const fetchArtwork = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/v1/artworks/${id}`);
+        const response = await axios.get(`http://localhost:3000/api/v1/artworks/${artworkId}`);
         const relatedArtworks = await axios.get(
-          `http://localhost:3000/api/v1/artworks/${id}/related_artworks`
+          `http://localhost:3000/api/v1/artworks/${artworkId}/related_artworks`
         );
         setArtwork(response.data);
         setRelatedArtworks(relatedArtworks.data);
