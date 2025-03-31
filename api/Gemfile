@@ -20,6 +20,8 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
+gem "rails-helper", "~> 0.1.0"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -39,6 +41,7 @@ gem "byebug"
 # Type checking
 gem "sorbet-runtime"
 gem "typed_params"
+gem "sorbet-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -49,4 +52,7 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
