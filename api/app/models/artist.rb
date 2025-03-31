@@ -15,3 +15,5 @@ class Artist < ApplicationRecord
     end
   end
 end
+
+

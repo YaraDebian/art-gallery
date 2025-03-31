@@ -67,5 +67,37 @@ RSpec.describe Recommendations::ArtworkRecommendationService do
         end
       end
     end
+
+    context 'when an invalid recommendation type is provided' do
+      it 'raises an ArgumentError' do
+        expect {
+          Recommendations::ArtworkRecommendationService.find_recommendations(artwork_1, :invalid_type)
+        }.to raise_error(ArgumentError)
+      end
+    end
+
+
+    context 'when multiple artworks have identical attributes' do
+      let!(:artwork_2) { FactoryBot.create(:artwork, artist: artist, art_movement: art_movement, year: 1900) }
+      let!(:artwork_3) { FactoryBot.create(:artwork, artist: artist, art_movement: art_movement, year: 1900) }
+
+      it 'returns all matching artworks without duplication' do
+        recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(artwork_1, :artist)
+        expect(recommendations).to contain_exactly(artwork_2, artwork_3)
+      end
+    end
+
+    # context 'with a large dataset' do
+    #   before do
+    #     create_list(:artwork, 10_000, artist: artist, art_movement: art_movement)
+    #   end
+
+    #   it 'returns recommendations in a timely manner' do
+    #     start_time = Time.now
+    #     recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(artwork_1, :artist)
+    #     end_time = Time.now
+    #     expect(end_time - start_time).to be < 2.0 # Expecting the operation to complete in under 2 seconds
+    #   end
+    # end
   end
 end
