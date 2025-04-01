@@ -4,54 +4,51 @@ require "typed_params"
 module Api
   module V1
     class ArtworksController < ApplicationController
-      before_action :set_artwork, only: [ :show, :update, :destroy ]
-
       def index
         @artworks = Artwork.includes(:artist, :art_movement).all
         render json: @artworks, include: [ :artist, :art_movement ]
       end
 
       def show
-        render json: @artwork, include: [ :artist, :art_movement ]
+        artwork = Artwork.find(read_params.id)
+        render json: artwork, include: [ :artist, :art_movement ]
       end
 
       def related_artworks
-        @artwork = Artwork.find(read_params.id)
-        recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :artist)
-        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :movement)
-        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(@artwork, :period)
+        artwork = Artwork.find(read_params.id)
+        recommendations = Recommendations::ArtworkRecommendationService.find_recommendations(artwork, :artist)
+        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(artwork, :movement)
+        recommendations += Recommendations::ArtworkRecommendationService.find_recommendations(artwork, :period)
 
         render json: recommendations, include: [ :artist, :art_movement ]
       end
 
       def create
-        @artwork = Artwork.new(create_params)
+        artwork = Artwork.new(create_params)
 
-        if @artwork.save
-          render json: @artwork, status: :created, include: [ :artist, :art_movement ]
+        if artwork.save
+          render json: artwork, status: :created, include: [ :artist, :art_movement ]
         else
-          render json: @artwork.errors, status: :unprocessable_entity
+          render json: artwork.errors, status: :unprocessable_entity
         end
       end
 
       def update
-        if @artwork.update(update_params)
-          render json: @artwork, include: [ :artist, :art_movement ]
+        artwork = Artwork.find(update_params.id)
+        if artwork.update(update_params)
+          render json: artwork, include: [ :artist, :art_movement ]
         else
-          render json: @artwork.errors, status: :unprocessable_entity
+          render json: artwork.errors, status: :unprocessable_entity
         end
       end
 
       def destroy
-        @artwork.destroy
+        artwork = Artwork.find(destroy_params.id)
+        artwork.destroy
         head :no_content
       end
 
       private
-
-      def set_artwork
-        @artwork = Artwork.find(params[:id])
-      end
 
       class ReadParams < T::Struct
         const :id, Integer, factory: ->(val) { Integer(val) }
@@ -81,8 +78,16 @@ module Api
         const :year, Integer, factory: ->(val) { Integer(val) }
       end
 
+      class DestroyParams < T::Struct
+        const :id, Integer, factory: ->(val) { Integer(val) }
+      end
+
       def update_params
         TypedParams[UpdateParams].new.extract!(params)
+      end
+
+      def destroy_params
+        TypedParams[DestroyParams].new.extract!(params)
       end
     end
   end
