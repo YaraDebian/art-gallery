@@ -3,7 +3,7 @@ module Recommendations
     RecommendationStrategy.register(:period, self)
 
     def find(artwork)
-      Artwork.where(year: artwork.year).where.not(id: artwork.id)
+      Artwork.by_year(artwork.year).where.not(id: artwork.id)
     end
   end
 end

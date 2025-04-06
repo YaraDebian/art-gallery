@@ -3,7 +3,7 @@ module Recommendations
     RecommendationStrategy.register(:movement, self)
 
     def find(artwork)
-      Artwork.where(art_movement_id: artwork.art_movement_id).where.not(id: artwork.id)
+      Artwork.by_art_movement(artwork.art_movement_id).where.not(id: artwork.id)
     end
   end
 end
